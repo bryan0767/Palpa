@@ -69,7 +69,7 @@
         <div class ='row text-center'>
           <div class = ' col-sm-6' id ='albumImage' style ='margin-bottom:20px;'>
             <h2 style = 'margin-bottom:20px;'>Waifu Digital Available Now</h2>
-            <img class='img-responsive' style ='width:80%;margin: 0 auto;'src = 'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Falbum.jpg?1529190016973'>
+            <img class='img-responsive' style ='width:80%;margin: 0 auto;'src = '../src/album.jpg'>
           </div>
           <div class = 'col-sm-6' id ='musicPlayer'>
           <iframe allow="autoplay *; encrypted-media *;"
@@ -99,7 +99,7 @@
         <div class='aboutpics'>
         <div class='row picrow1'>
           <div class=' col-sm-8' id='col1col'>
-            <img data-key=6 class ='bigPic img-responsive' src='https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy1.jpg?1529984884349'/>
+            <img data-key=6 class ='bigPic img-responsive' src='../src/trippy1.jpg'/>
             <div class='overlay'>
               <p class='overcontent text-center'>Palpa is a music producer, DJ,
                 and graphic designer
@@ -114,12 +114,12 @@
               <img
               data-key=1
               class='goodgood img-responsive'
-              src ='https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy2.jpg?1529984890663'/>
+              src ='../src/trippy2.jpg'/>
               <img
               data-key=2
               id='two'
               class=' goodgood img-responsive'
-               src ='https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy3.jpg?1529984891199'/>
+               src ='../src/trippy3.jpg'/>
             </div>
         </div>
         <div class='row picrow2'>
@@ -127,21 +127,21 @@
             <img
             data-key=3
 
-            class ='goodgood smallPic img-responsive' src='https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy4.jpg?1529984884659' />
+            class ='goodgood smallPic img-responsive' src='../src/trippy4.jpg' />
             <!-- <div class='overlay'></div> -->
           </div>
           <div class=' col-sm-4'>
             <img
             data-key=4
 
-            class ='goodgood smallPic img-responsive' src='https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy5.jpg?1529984885338' />
+            class ='goodgood smallPic img-responsive' src='../src/trippy5.jpg' />
             <!-- <div class='overlay'></div> -->
 
           </div>
           <div class='col-sm-4'>
             <img
             data-key=5
-            class ='goodgood smallPic img-responsive' src='https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy6.jpg?1529984886137' />
+            class ='goodgood smallPic img-responsive' src='../src/trippy6.jpg' />
             <!-- <div class='overlay'></div> -->
 
           </div>
@@ -280,15 +280,6 @@
         let bigover = document.querySelector('.overcontent')
         let toggle = document.querySelector('.toggle')
         let imageimage = document.querySelectorAll('.goodgood')
-        let sources = [
-                      'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy12.jpg?1529984890490',
-                       'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy11.jpg?1529984891523',
-                       'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy7.jpg?1529984885570',
-                       'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy8.jpg?1529984885813',
-                       'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy10.jpg?1529984887371',
-                       'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy9.jpg?1529984884896',
-                       
-                      ]
         let random = []
         let src2 = []
 
@@ -301,10 +292,10 @@
           } else {
             big.style.opacity = 1;
           }
-             random.push(getRandom(0,5))
+              random.push(getRandom(7,12))
               src2.push(bigpic.src)
-              bigpic.src = sources[random[0]]
-              random = []
+              bigpic.src =`../src/trippy${random[0]}.jpg`
+          random = []
           })
 
           big.addEventListener('mouseleave',function(){
@@ -381,9 +372,9 @@
   x.addEventListener('mouseover',function(e){
     // console.log(e);
 
-      random.push(getRandom(0,5))
+      random.push(getRandom(7,12))
       src2.push(x.src)
-      x.src = sources[random[0]]
+      x.src =`../src/trippy${random[0]}.jpg`
       random = []
 
   })
