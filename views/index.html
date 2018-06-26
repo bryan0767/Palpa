@@ -3,45 +3,55 @@
   <head>
     <title>Palpa</title>
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFr8AAF19oQD/CAAA////AADq/wAAAP8AuwD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIgAAAAACJ3d3IgAAACdxd0d3IAACdXd3dzdyACd3dyInd2cgJ2dyAAJ3dyAndyAAACd3ICd3IAAAJ0cgJ3cgAAAndyAnN3IAAnd3ICd3dyIncXYgJ1d3d3d3dyACdxd3d1dyAAAnd0d3dyAAAAInd3ciAAAAAAIiIgAAD8HwAA8AcAAOADAADAAQAAgAAAAIHAAACD4AAAg+AAAIPgAACBwAAAgAAAAIAAAADAAQAA4AMAAPAHAAD8HwAA" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Anaheim" rel="stylesheet">
     <link href="../src/index.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Anaheim|Indie+Flower|Raleway+Dots" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Questrial" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?9ukd8d">
   </head>
   <body>
+    <!-- class='collapse navbar-collapse'  -->
+
 
     <!-- top -->
+
+
 
     <!-- Burger Nav -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <nav class='navbar navbar-inverse navbar-fixed-left'>
-      <div class='container-fluid'>
-        <div class='navbar-header'>
-          <button type='button' class='navbar-toggle'
-          data-toggle='collapse' data-target='#myNavBar'>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
-          </button>
-        </div>
-        <div class='collapse navbar-collapse' style='border:none;border-radius: 0;-webkit-box-shadow: none;box-shadow: none;' id ='myNavBar'>
-          <ul class="nav navbar-nav navbar-right">
-              <li ><a href="#Home2"><span class="glyphicon glyphicon-home"></span></a></li>
-              <li><a href="#Music"><span class="glyphicon glyphicon-music"></span></a></li>
-              <li><a href="#DatePage"><span class="glyphicon glyphicon-calendar"></span></a></li>
-              <li><a href="#Contacto"><span class="glyphicon glyphicon-envelope"></span></a></li>
-          </ul>
-        </div>
+
+    <div>
+      <ul class="nav">
+          <li ><a href="#Home2"><span class="glyphicon glyphicon-home"></span></a></li>
+          <li><a href="#Music"><span class="glyphicon glyphicon-music"></span></a></li>
+          <li><a href="#about"><span class="glyphicon glyphicon-question-sign"></span></a></li>
+          <li><a href="#DatePage"><span class="glyphicon glyphicon-calendar"></span></a></li>
+          <li><a href="#Contacto"><span class="glyphicon glyphicon-envelope"></span></a></li>
+      </ul>
+    </div>
+
+    <button type='button' onclick="openNav()" class='toggle'
+    data-toggle='collapse' data-target='#myNavBar'
+    style='font-size:40px;background:none !important;border:none;animation:watermove 5s infinite'>
+  &#9776;
+    </button>
+
+    <div id="myNav" class="overlayMenu">
+      <div class="overlay-contentMenu">
+        <li ><a href="#Home2"><span onclick="openNav()" class="glyphicon glyphicon-home"></span></a></li>
+        <li><a href="#Music"><span onclick="openNav()" class="glyphicon glyphicon-music"></span></a></li>
+        <li><a href="#about"><span onclick="openNav()" class="glyphicon glyphicon-question-sign"></span></a></li>
+        <li><a href="#DatePage"><span onclick="openNav()" class="glyphicon glyphicon-calendar"></span></a></li>
+        <li><a href="#Contacto"><span onclick="openNav()" class="glyphicon glyphicon-envelope"></span></a></li>
       </div>
-    </nav>
+    </div>
+
       <!-- end burger nav -->
       <a id = 'Home2'></a>
       <div style='width:100%;margin:0px;' id ='myCarousel' class="carousel slide" data-ride='carousel'>
@@ -56,80 +66,172 @@
       <!-- music -->
   <a id = 'Music'></a>
       <div class=' container main text-center'>
-        <!-- <div class='player'> -->
-      <iframe allow="autoplay *; encrypted-media *;"
-      frameborder="0" height="450"
-      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-      src="https://embed.music.apple.com/us/album/waifu-digital/1271824872?app=music"
-      width="660">
-      </iframe>
+        <div class ='row text-center'>
+          <div class = ' col-sm-6' id ='albumImage' style ='margin-bottom:20px;'>
+            <h2 style = 'margin-bottom:20px;'>Waifu Digital Available Now</h2>
+            <img class='img-responsive' style ='width:80%;margin: 0 auto;'src = 'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Falbum.jpg?1529190016973'>
+          </div>
+          <div class = 'col-sm-6' id ='musicPlayer'>
+          <iframe allow="autoplay *; encrypted-media *;"
+          frameborder="0" height="450"
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+          src="https://embed.music.apple.com/us/album/waifu-digital/1271824872?app=music"
+          width="660">
+          </iframe>
       <!-- </div> -->
           <div class='row'>
               <div class = 'col-sm-12 text-center icon' style='margin:1em auto'>
                 <a target ='blank' href ='https://open.spotify.com/album/4kPZRcVYyo0hDwQZCCgOw4'><i class="fa fa-spotify"></i></a>
                 <a target ='blank' href ='https://itunes.apple.com/us/album/waifu-digital/1271824872?app=music'><i class="fa fa-apple"></i></a>
-                <a target ='blank' href ='https://listen.tidal.com/album/77500541'><img style ='height:1.3em;'src='https://images-na.ssl-images-amazon.com/images/I/61EC1IuyA5L.png' /></a>
+                <!-- <a target ='blank' href ='https://listen.tidal.com/album/77500541'><img style ='height:1.3em;'src='https://images-na.ssl-images-amazon.com/images/I/61EC1IuyA5L.png' /></a> -->
                 <a target ='blank' href ='https://us.napster.com/artist/palpa/album/waifu-digital'><i class="socicon-napster"></i></a>
                 <a target ='blank' href ='https://soundcloud.com/palpapalpa/sets/waifu-digital-1'><i class="fa fa-soundcloud"></i></a>
+              </div>
             </div>
           </div>
+        </div>
       </div>
+
+      <!-- about -->
+      <a id = 'about'></a>
+      <div class='container about'>
+        <a id = 'about'></a>
+        <div class='aboutpics'>
+        <div class='row picrow1'>
+          <div class=' col-sm-8' id='col1col'>
+            <img data-key=6 class ='bigPic img-responsive' src='https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy1.jpg?1529984884349'/>
+            <div class='overlay'>
+              <p class='overcontent text-center'>Palpa is a music producer, DJ,
+                and graphic designer
+                based out of Chicago, IL.
+                Influenced by artists such as Tiesto, Marshmellow, and
+                Skrillex he became obsessed with mixing new and different
+                sounds with trap influenced percussion.
+              </p>
+              </div>
+          </div>
+            <div class='col-sm-4 colpic2 '>
+              <img
+              data-key=1
+              class='goodgood img-responsive'
+              src ='https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy2.jpg?1529984890663'/>
+              <img
+              data-key=2
+              id='two'
+              class=' goodgood img-responsive'
+               src ='https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy3.jpg?1529984891199'/>
+            </div>
+        </div>
+        <div class='row picrow2'>
+          <div class='col-sm-4'>
+            <img
+            data-key=3
+
+            class ='goodgood smallPic img-responsive' src='https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy4.jpg?1529984884659' />
+            <!-- <div class='overlay'></div> -->
+          </div>
+          <div class=' col-sm-4'>
+            <img
+            data-key=4
+
+            class ='goodgood smallPic img-responsive' src='https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy5.jpg?1529984885338' />
+            <!-- <div class='overlay'></div> -->
+
+          </div>
+          <div class='col-sm-4'>
+            <img
+            data-key=5
+            class ='goodgood smallPic img-responsive' src='https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy6.jpg?1529984886137' />
+            <!-- <div class='overlay'></div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
 
       <a id = 'DatePage'></a>
       <!-- Dates -->
 
-      <div class='container dates text-center'>
-        <div class ='row'>
-          <div class ='col-xs-12'>
-            <div class='list-group'>
-                <h2 class='list-group-item'><span >6/24</span> Beat Kitchen</h2>
-                <h2 class='list-group-item'><span >7/03</span> Subterranean</h2>
-                <h2 class='list-group-item'><span >7/11</span> Cafe Mustache</h2>
-                <h2 class='list-group-item'><span >7/23</span> Cole's Bar</h2>
-                <h2 class='list-group-item'><span >8/09</span> Emporium</h2>
-                <h2 class='list-group-item'><span >9/10</span> Mr.Rogers</h2>
-            </div>
-          </div>
-        </div>
+      <div class='container dates text-center table-responsive-sm'>
+        <table class="table">
+          <thead class= 'text-center'>
+            <tr class = 'text-center'>
+              <th scope="col">Date</th>
+              <th scope="col">City</th>
+              <th scope="col">Venue</th>
+              <th scope="col">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">6/24/18</th>
+              <td>Chicago, IL</td>
+              <td>Beat Kitchen</td>
+              <td>8:00</td>
+            </tr>
+            <tr>
+              <th scope="row">7/3/18</th>
+              <td>Chicago, IL</td>
+              <td>Subterranean</td>
+              <td>9:00</td>
+            </tr>
+            <tr>
+              <th scope="row">7/11/18</th>
+              <td>Chicago, IL</td>
+              <td>Cafe Mustache</td>
+              <td>8:30</td>
+            </tr>
+            <tr>
+              <th scope="row">7/23/18</th>
+              <td>Chicago, IL</td>
+              <td>Mr.Rogers</td>
+              <td>10:00</td>
+            </tr>
+            <tr>
+              <th scope="row">9/10/18</th>
+              <td>Chicago, IL</td>
+              <td>Cole's Bar</td>
+              <td>9:00</td>
+            </tr>
+          </tbody>
+        </table>
         <div class='row text-center dateInput'>
             <form action = "/api/shows"  role = 'form' method ="post">
 
-              <div class='col-xs-8 col-sm-10 col-md-10 dateEmail'>
+              <div class='col-xs-8 col-sm-9 col-md-10 dateEmail'>
                   <div class='form-group'>
                       <input id='dateInput'
                       class= 'form-control' type="email"
+                      required
                       name="signup" placeholder='Keep up...'>
                   </div>
               </div>
-              <div class='col-xs-4 col-sm-2 col-md-2 dateSubmit'>
+              <div class='col-xs-4 col-sm-3 col-md-2 dateSubmit'>
                 <div class='form-group'>
                     <input id = 'submit'
-                    class = 'btn' value ='Send' type="submit"></input>
+                    class = 'btn' value ='Send' type="submit" ></input>
                </div>
               </div>
             </form>
           </div>
 
-
       </div>
-
-
 
       <!-- Contact -->
       <a id ='Contacto'></a>
       <div class ='container text-center contact'>
           <h1>Contact</h1>
-          <form action = "/api/donuts"  role = 'form' method ="post">
+          <form action = "/api/donuts" role = 'form' method ="post">
             <div class ='row row1'>
                   <div class='form-group'>
                     <div class ='col-sm-12 col-xs-12 col-md-6 col-lg-6 text-center' id='contactName'>
                       <input class= 'form-control' type="text"
-                    name="name" placeholder='Name'>
+                    name="name" required placeholder='Name'>
                     </div>
                   </div>
                   <div class='form-group'>
                     <div class ='col-sm-12 col-xs-12 col-md-6 col-lg-6 text-center' id='contactEmail'>
-                      <input class= 'form-control' type="email"
+                      <input required class= 'form-control' type="email"
                       name="email" placeholder='Email'>
                     </div>
                   </div>
@@ -137,7 +239,7 @@
             <div class = 'row form-group row2'>
                 <div class = 'col-sm-12'>
                   <textarea rows=5 maxlength ='5000' class ='form-control' id ='comment'
-                    name="text" placeholder='Message...' type ='textarea' value = ''></textarea>
+                    name="text" required placeholder='Message...' type ='textarea' value = ''></textarea>
                 </div>
             </div>
             <div class='form-group contactSubmitdiv'>
@@ -158,11 +260,142 @@
               <div class ='foot'>
                 <a target ='blank' href ='https://www.facebook.com/pppalpa/'><i
                   class="fa fa-facebook-official"></i></a>
-                <a target ='blank' href ='http://hotsta.net/palpa_'><i
-                  class="fa fa-instagram"></i></a>
+                <a target ='blank' href ='https://twitter.com/palpapalpa_'><i
+                  class="fa fa-twitter"></i></a>
+                  <a target ='blank' href ='http://hotsta.net/palpa_'><i
+                    class="fa fa-instagram"></i></a>
+                    <a target ='blank' href ='https://palpa.bandcamp.com/'><i
+                      class="fa fa-bandcamp"></i></a>
               </div>
          </footer>
 
+         <script>
+
+         function getRandom(min, max) {
+           return Math.round(Math.random() * (max - min) + min)
+         }
+
+         let big = document.querySelector('.overlay')
+         let bigpic = document.querySelector('.bigPic')
+        let bigover = document.querySelector('.overcontent')
+        let toggle = document.querySelector('.toggle')
+        let imageimage = document.querySelectorAll('.goodgood')
+        let sources = [
+                      'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy12.jpg?1529984890490',
+                       'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy11.jpg?1529984891523',
+                       'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy7.jpg?1529984885570',
+                       'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy8.jpg?1529984885813',
+                       'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy10.jpg?1529984887371',
+                       'https://cdn.glitch.com/a49ea4cd-2452-4567-a835-8eefc189c102%2Ftrippy9.jpg?1529984884896',
+                       
+                      ]
+        let random = []
+        let src2 = []
+
+
+
+        big.addEventListener('mouseover',function(e){
+          // prev.push(e.target)
+      if( document.getElementById("myNav").style.display === "block") {
+            big.style.opacity = 0;
+          } else {
+            big.style.opacity = 1;
+          }
+             random.push(getRandom(0,5))
+              src2.push(bigpic.src)
+              bigpic.src = sources[random[0]]
+              random = []
+          })
+
+          big.addEventListener('mouseleave',function(){
+            prev = []
+            big.style.opacity = 0;
+              bigpic.src = src2[0]
+              src2 = []
+              random = []
+            })
+
+         $(document).ready(function(){
+           $(".nav a,.overlay-contentMenu li a, footer a[href='#myPage']").on('click', function(event) {
+
+           if (this.hash !== "") {
+
+             event.preventDefault();
+
+             // Store hash
+             var hash = this.hash;
+             $('html, body').animate({
+               scrollTop: $(hash).offset().top
+             }, 900, function(){
+               window.location.hash = hash;
+               });
+             }
+           });
+
+           $( window ).resize(function() {
+            if($(window).width() < 768 && $(window).width() > 550) {
+              console.log('yooooo');
+              $('#albumImage').addClass("col-xs-6");
+              $('#musicPlayer').addClass("col-xs-6");
+            } else {
+              $('#albumImage').removeClass("col-xs-6");
+              $('#musicPlayer').removeClass("col-xs-6");
+            }
+
+              });
+         })
+
+         function openNav(event) {
+           console.log(event);
+      if(  document.getElementById("myNav").style.display === "block") {
+          document.getElementById("myNav").style.display = "none";
+      } else {
+         document.getElementById("myNav").style.display = "block"
+      }
+  }
+
+  if($(window).width() < 550) {
+    $(".toggle").css("display", "inline");
+    $(".nav").css("display", "none");
+  } else {
+    $(".toggle").css("display", "none");
+    $(".nav").css("display", "inline");
+
+  }
+
+  $( window ).resize(function() {
+         if($(window).width() < 550) {
+           $(".toggle").css("display", "inline");
+           $(".nav").css("display", "none");
+           // $(".nav").css("border", "2px solid purple");
+         } else {
+           $(".toggle").css("display", "none");
+           $(".nav").css("display", "inline");
+
+         }
+       });
+
+
+       imageimage.forEach(x => {
+         console.log(x);
+  x.addEventListener('mouseover',function(e){
+    // console.log(e);
+
+      random.push(getRandom(0,5))
+      src2.push(x.src)
+      x.src = sources[random[0]]
+      random = []
+
+  })
+  x.addEventListener('mouseleave',function(e){
+
+    x.src = src2[0]
+    src2 = []
+    random = []
+
+  })
+})
+         </script>
 
   </body>
 </html>
